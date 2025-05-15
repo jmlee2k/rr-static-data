@@ -13,5 +13,8 @@ export function loader({ context }: Route.LoaderArgs) {
 }
 
 export default function Home({ loaderData }: Route.ComponentProps) {
-  return <Welcome message={loaderData.message} />;
+  return <>
+    <img src={__ENV.IMG_URL}/>
+    <Welcome message={loaderData.message} />
+  </>
 }
